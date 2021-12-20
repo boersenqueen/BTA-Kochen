@@ -1,0 +1,106 @@
+/*erst den Begriff (Selektor) nennem, dann {} !!!*/
+
+* {
+  box-sizing: border-box;
+}
+/*Body soll keine Margin haben*/
+
+body {
+  margin: 0px;
+  max-width: 100%;
+}
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  font-size: 100%; /*Prozentwert bezieht sich auf Einstellung im Browser  / Standard 16px*/
+}
+
+/*Liste soll Schwarz große Buchstaben haben*/
+a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+/*keine Aufzählungszeichen*/
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Menü-Knopf soll weiß sein und ohne Rahmen*/
+
+button {
+  background-color: transparent;
+  border: none;
+}
+/*hier rede ich mit kleinem Bildschirm*/
+nav {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+li {
+  margin: 10px;
+}
+
+#hero {
+  background-image: url(img/intro.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  background-color: white;
+  border: 1px solid #374a67;
+  border-radius: 5px;
+  color: #374a67;
+  padding: 16px;
+ 
+  font-weight: normal;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+ /*Pseudoselektor, wenn man mit der Maus darüberschwebt*/
+.button:hover {
+  background-color: #374a67;
+  color: white;
+  /*Farbwechsel im Verlauf*/
+  transition: all 0.4s ease;
+}
+
+/*hier rede ich nur mit dem großen Bildschirm  / Fallunterscheidung für Handy und PC heißt media query (ist eine Medienanfrage für responsibles Webdesign*/
+@media (min-width: 960px) {
+  button {
+    display: none;
+  }
+  nav {
+    display: block;
+  }
+
+  /*Listitems nebeneinander stellen auf großem Bildschhhirm*/
+
+  ul {
+    display: flex;
+  }
+}
