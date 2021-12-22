@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BTA Kochen</title>
   </head>
+<link rel="stylesheet" href="fonts/icons.css"> <!--stylesheet für die Social Media Icons-->
   <link rel="stylesheet" href="style.css" />
+
   <body>
     <header>
       <!--hier ist das verlinkte Logo-->
@@ -35,11 +37,143 @@
       </nav>
     </header>
 
-    <main><section id="hero">
-      <h1>Die besten Rezepte für Webworker</h1>
-      <p>Es gibt mehr als Pizza und Ravioli</p>
-    <a href="#" class="button">Entdecke die Leckereien</a>
-    </section></main>
+    <main>
+      <section id="hero">
+        <h1>Die besten Rezepte für Webworker</h1>
+        <p>Es gibt mehr als Pizza und Ravioli</p>
+        <!--href #rezepte verweist zur Sektion mit den Karten-->
+        <a href="#rezepte" class="button">Entdecke die Leckereien</a>
+      </section>
+
+      <section id="rezepte">
+        <h2>Die neuesten Rezepte</h2>
+        <div class="row">
+          <!--ist die Box für alle Karten für die flexboxS-->
+          <!--erste Karte mit Bild Anfang-->
+          <div class="card">
+            <div class="bild">
+              <img src="img/burger.jpg" alt="Burger" />
+            </div>
+            <div class="text">
+              <h3>Total leckerer Burger</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing doloremque
+                molestiae commodi expedita possimus reiciendis quibusdam dicta?
+              </p>
+              <a href="#" class="button invert">Zum Rezept</a>
+              <!--klassennamen mit Leerschritt getrennt gibt es zwei Klassen: button UND invert-->
+              <!--Karte mit Bild Ende-->
+            </div>
+          </div>
+          <!--zweite Karte mit Bild Anfang-->
+          <div class="card">
+            <div class="bild">
+              <img src="img/farfalle.jpg" alt="Farfalle" />
+            </div>
+            <div class="text">
+              <h3>Total leckere Farfalle</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing doloremque
+                molestiae commodi expedita possimus reiciendis quibusdam dicta?
+              </p>
+              <a href="#" class="button invert">Zum Rezept</a>
+
+              <!--Karte mit Bild Ende-->
+            </div>
+          </div>
+          <!--dritte Karte mit Bild Anfang-->
+          <div class="card">
+            <div class="bild">
+              <img src="img/kuerbissuppe.jpg" alt="Kürbissuppe" />
+            </div>
+            <div class="text">
+              <h3>Total leckere Kürbissuppe</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing doloremque
+                molestiae commodi expedita possimus reiciendis quibusdam dicta?
+              </p>
+              <a href="#" class="button invert">Zum Rezept</a>
+
+              <!--Karte mit Bild Ende-->
+            </div>
+          </div>
+          <!--vierte Karte mit Bild Anfang-->
+          <!--Link um die Karte herum legen, dann öffnet der Link auch, wenn ich auf Bild, h3 oder p klicke -->
+          <div class="card">
+            <div class="bild">
+              <img
+                src="img/reispfanne-lissabon.jpg"
+                alt="Reispfanne Lissabon"
+              />
+            </div>
+            <div class="text">
+              <h3>Total leckere Reispfanne</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing doloremque
+                molestiae commodi expedita possimus reiciendis quibusdam dicta?
+              </p>
+              <a href="#" class="button invert">Zum Rezept</a>
+
+              <!--Karte mit Bild Ende-->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section>
+      <aside>
+        <h2>Kein Rezept mehr verpassen</h2>
+        <p>Hol Dir unseren Newsletter</p>
+        <form action="">
+          <!--hier würde man die URL eintragen, die man von Mailprovider zb Mailchimp bekommt--->
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="button"
+            placeholder="Deine E-Mail-Adresse"
+          />
+          <!--diese input-daten tauchen in der URL auf, wenn User Daten eingegeben hat.  -->
+          <!--input schließt sich selbst-->
+          <button type="submit" class="button" id="abonnieren">
+            ABONNIEREN
+          </button>
+        </form>
+      </aside>
+    </section>
+
+    <footer>
+      <!--Jetzt kommt die Navigation für die Pflichtlinks-->
+      <nav class="pflicht">
+        <ul>
+          <li>
+            <a href="#">Impressum</a>
+          </li>
+          <li>
+            <a href="#">Datenschutz</a>
+          </li>
+          <li>
+            <a href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <!--Jetzt kommt die Navigation für Social Media-->
+      <nav class="social-media">
+        <ul>
+          <li class="icon-facebook">
+            <a href="https://www.facebook.com" target="_blank"></a>
+          </li>
+          <li class="icon-instagram">
+            <a href="https://www.instagram.com" target="_blank"></a>
+          </li>
+          <li class="icon-youtube">
+            <a href="https://www.youtube.com" target="_blank"></a>
+            <!--ich wähle aus ein a das steht in einer klasse icon-youtube-->
+          </li>
+        </ul>
+      </nav>
+    </footer>
 
     <script src="js/menu.js"></script>
   </body>

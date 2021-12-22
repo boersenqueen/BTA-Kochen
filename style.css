@@ -40,7 +40,9 @@ nav {
   display: none;
 }
 
-.show {
+.show,
+.pflicht,
+.social-media {
   display: block;
 }
 
@@ -71,36 +73,121 @@ li {
   justify-content: center;
   align-items: center;
 }
+
 .button {
   background-color: white;
   border: 1px solid #374a67;
   border-radius: 5px;
   color: #374a67;
   padding: 16px;
- 
   font-weight: normal;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-}
- /*Pseudoselektor, wenn man mit der Maus darüberschwebt*/
-.button:hover {
-  background-color: #374a67;
-  color: white;
   /*Farbwechsel im Verlauf*/
   transition: all 0.4s ease;
 }
+/*Pseudoselektor, wenn man mit der Maus darüberschwebt*/
+.button:hover {
+  background-color: #374a67;
+  color: white;
+}
 
+/*Button invert*/
+.invert {
+  background-color: #374a67;
+  color: white;
+  display: block;
+  text-align: center; /*text-align könnte hier wegfallen, da es für Klasse card definiert ist*/
+}
+
+/*Pseudoselektor, wenn man mit der Maus darüberschwebt*/
+.invert:hover {
+  background-color: white;
+  color: #374a67;
+}
+
+/*responsive mitwachsende Bilder für alle Bilder, die in der Klasse Bild liegen*/
+.bild img {
+  display: block;
+  width: 100%;
+}
+.card {
+  text-align: center;
+  margin: 16px;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  overflow: hidden; /*macht, dass das Bild auch runde Ecken bekommt*/
+}
+
+.text {
+  margin: 16px;
+}
+/*h2 soll zentriert stehen*/
+#rezepte {
+  text-align: center;
+}
+
+aside {
+  background-color: #04122b;
+  color: white;
+  text-align: center;
+  padding: 32px;
+}
+
+/*nimmt den Farbwechsel beim Darüberfahren wieder weg*/
+#email:hover,
+#abonnieren:hover {
+  background: white;
+  color: #374a67;
+}
+
+#email {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#abonnieren {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/*input und button haben display inline, deshalb 4px Abstand zwischen beiden Feldern*/
+form {
+  display: flex;
+  justify-content: center;
+}
+/*Logos bleiben immer nebeneinander*/
+.social-media ul {
+  display: flex;
+  font-size: 2rem;
+}
 /*hier rede ich nur mit dem großen Bildschirm  / Fallunterscheidung für Handy und PC heißt media query (ist eine Medienanfrage für responsibles Webdesign*/
 @media (min-width: 960px) {
-  button {
+  header button {
     display: none;
   }
   nav {
     display: block;
   }
 
-  /*Listitems nebeneinander stellen auf großem Bildschhhirm*/
+  .row {
+    display: flex;
+  } /*Karten stehen nebeneinander*/
+
+  /*Listitems nebeneinander stellen auf großem Bildschirm*/
 
   ul {
     display: flex;
+  }
+  h1 {
+    font-size: 3rem
+      /*3 x 16 pixel = 48px  // Ansage ist: sei dreimal so groß wie Schrift auf kleinem Bildschirm REM ist die Abkürzung für root M (root = Wurzel; M = der Buchstabe M)*/;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
