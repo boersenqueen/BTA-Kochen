@@ -10,7 +10,7 @@ body {
   max-width: 100%;
 }
 html {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Outfit', sans-serif;
   line-height: 1.4;
   font-size: 100%; /*Prozentwert bezieht sich auf Einstellung im Browser  / Standard 16px*/
 }
@@ -46,6 +46,16 @@ nav {
   display: block;
 }
 
+.show {
+  position: absolute;
+  top: 64px;
+  background: white;
+  width: 100%;
+  left: 0px;
+  text-align: center;
+  height: 100vh;padding-top: 3rem;
+  border-top: black 1px solid; 
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -53,6 +63,9 @@ header {
   align-items: center;
   padding-left: 32px;
   padding-right: 32px;
+  position: fixed;
+  background: white;
+  width: 100%;
 }
 li {
   margin: 10px;
@@ -159,6 +172,10 @@ form {
 .social-media ul {
   display: flex;
   font-size: 2rem;
+  justify-content: center;
+}
+footer {
+  text-align: center;
 }
 /*hier rede ich nur mit dem großen Bildschirm  / Fallunterscheidung für Handy und PC heißt media query (ist eine Medienanfrage für responsibles Webdesign*/
 @media (min-width: 960px) {
